@@ -31,24 +31,31 @@ header{
     height: 100px;
     flex-shrink: 0;
     color: blueviolet;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 .list-item{
-    display: flex;
-    width: 260px;
-    justify-content: space-between;
+ width: 683px;
+height: 37px;
+flex-shrink: 0;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+gap: 22px;
 }
 
 .apresentacao{
     /*vh= unidade de medida equivalente a altura do viewport ou seja, se o viewport for 1000px, 60vh irá representar 60% dos 1000px ou seja 600px*/
-    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .apresentacao .txt-apresentacao{
-    height: 200px;
     color: #000;
 font-feature-settings: 'clig' off, 'liga' off;
 font-family: Arial;
@@ -101,48 +108,50 @@ text-align: center;
 .quem-somos{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    gap: 5px;
 }
 
 .quem-somos h2{
     font-size: 32px;
-    color: #122a57;
-    margin-bottom: 20px;
-    border-left: 4px solid #122a57;
-    padding-left: 10px;
+    color:blueviolet;
 }
 
 .quem-somos img{
     width: 359.112px;
     height: 257.481px;
     flex-shrink: 0;
-
-}
-
-.container-externo{
-    background-color: #122a57;
-    width: 100%;
-    display: flex;
-}
-
-#servicos{
-    display:flex;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-
-#servicos h2{
-    color:#fff;
-    font-size: 32px;
-    margin-bottom:20px;
-}
-
-.list-servicos{
-    display: flex;
-    justify-content: space-between;
 }
 
  .design{
     background-color: #DBFFF8;
     }
+
+    .texto{
+        border-radius: 10px;
+border: 2px solid rgba(0, 0, 0, 0.25);
+background: #BDBDBD;
+justify-content: space-between;
+position: relative;
+font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+  /* Estilos para telas médias (tablets) */
+  @media (max-width: 950px) {
+    .menu{
+        flex-direction: column;
+    }
+  }
+  
+  /* Estilos para telas pequenas (smartphones) */
+  @media (max-width: 576px) {
+   .container{
+       flex-wrap: wrap;
+   }
+   .apresentacao{
+       flex-wrap: wrap;
+       gap: 10px;
+   }
+  }
+   
 
